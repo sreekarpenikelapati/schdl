@@ -1,0 +1,182 @@
+p {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+  .outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    /* Whatever width you want */
+  }
+
+  .fade-in-text {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  html {
+    background:
+      linear-gradient(180deg, rgba(248, 184, 139, 0) 20%, rgba(248, 184, 139, .1) 20%, rgba(248, 184, 139, .1) 40%, rgba(248, 184, 139, .2) 40%, rgba(248, 184, 139, .2) 60%, rgba(248, 184, 139, .4) 60%, rgba(248, 184, 139, .4) 80%, rgba(248, 184, 139, .5) 80%),
+      linear-gradient(45deg, rgba(250, 248, 132, .3) 20%, rgba(250, 248, 132, .4) 20%, rgba(250, 248, 132, .4) 40%, rgba(250, 248, 132, .5) 40%, rgba(250, 248, 132, .5) 60%, rgba(250, 248, 132, .6) 60%, rgba(250, 248, 132, .6) 80%, rgba(250, 248, 132, .7) 80%),
+      linear-gradient(-45deg, rgba(186, 237, 145, 0) 20%, rgba(186, 237, 145, .1) 20%, rgba(186, 237, 145, .1) 40%, rgba(186, 237, 145, .2) 40%, rgba(186, 237, 145, .2) 60%, rgba(186, 237, 145, .4) 60%, rgba(186, 237, 145, .4) 80%, rgba(186, 237, 145, .6) 80%),
+      linear-gradient(90deg, rgba(178, 206, 254, 0) 20%, rgba(178, 206, 254, .3) 20%, rgba(178, 206, 254, .3) 40%, rgba(178, 206, 254, .5) 40%, rgba(178, 206, 254, .5) 60%, rgba(178, 206, 254, .7) 60%, rgba(178, 206, 254, .7) 80%, rgba(178, 206, 254, .8) 80%),
+      linear-gradient(-90deg, rgba(242, 162, 232, 0) 20%, rgba(242, 162, 232, .4) 20%, rgba(242, 162, 232, .4) 40%, rgba(242, 162, 232, .5) 40%, rgba(242, 162, 232, .5) 60%, rgba(242, 162, 232, .6) 60%, rgba(242, 162, 232, .6) 80%, rgba(242, 162, 232, .8) 80%),
+      linear-gradient(180deg, rgba(254, 163, 170, 0) 20%, rgba(254, 163, 170, .4) 20%, rgba(254, 163, 170, .4) 40%, rgba(254, 163, 170, .6) 40%, rgba(254, 163, 170, .6) 60%, rgba(254, 163, 170, .8) 60%, rgba(254, 163, 170, .8) 80%, rgba(254, 163, 170, .9) 80%);
+    background-color: rgb(254, 163, 170);
+    background-size: 100% 100%;
+    min-height: 100%;
+    color: black;
+  }
+
+  .dark-mode {
+    background:
+      linear-gradient(180deg, rgba(54, 54, 54, 0) 20%, rgba(54, 54, 54, 0.3) 20%, rgba(54, 54, 54, 0.3) 40%, rgba(54, 54, 54, 0.4) 40%, rgba(54, 54, 54, 0.4) 60%, rgba(54, 54, 54, 0.5) 60%, rgba(54, 54, 54, 0.5) 80%, rgba(54, 54, 54, 0.6) 80%),
+      linear-gradient(45deg, rgba(52, 52, 52, 0.3) 20%, rgba(52, 52, 52, 0.4) 20%, rgba(52, 52, 52, 0.4) 40%, rgba(52, 52, 52, 0.5) 40%, rgba(52, 52, 52, 0.5) 60%, rgba(52, 52, 52, 0.6) 60%, rgba(52, 52, 52, 0.6) 80%, rgba(52, 52, 52, 0.7) 80%),
+      linear-gradient(-45deg, rgba(66, 46, 58, 0) 20%, rgba(66, 46, 58, 0.1) 20%, rgba(66, 46, 58, 0.1) 40%, rgba(66, 46, 58, 0.2) 40%, rgba(66, 46, 58, 0.2) 60%, rgba(66, 46, 58, 0.4) 60%, rgba(66, 46, 58, 0.4) 80%, rgba(66, 46, 58, 0.6) 80%),
+      linear-gradient(90deg, rgba(28, 33, 40, 0) 20%, rgba(28, 33, 40, 0.3) 20%, rgba(28, 33, 40, 0.3) 40%, rgba(28, 33, 40, 0.5) 40%, rgba(28, 33, 40, 0.5) 60%, rgba(28, 33, 40, 0.7) 60%, rgba(28, 33, 40, 0.7) 80%, rgba(28, 33, 40, 0.8) 80%),
+      linear-gradient(-90deg, rgba(39, 20, 34, 0) 20%, rgba(39, 20, 34, 0.4) 20%, rgba(39, 20, 34, 0.4) 40%, rgba(39, 20, 34, 0.5) 40%, rgba(39, 20, 34, 0.5) 60%, rgba(39, 20, 34, 0.6) 60%, rgba(39, 20, 34, 0.6) 80%, rgba(39, 20, 34, 0.8) 80%),
+      linear-gradient(180deg, rgba(63, 20, 23, 0) 20%, rgba(63, 20, 23, 0.4) 20%, rgba(63, 20, 23, 0.4) 40%, rgba(63, 20, 23, 0.6) 40%, rgba(63, 20, 23, 0.6) 60%, rgba(63, 20, 23, 0.8) 60%, rgba(63, 20, 23, 0.8) 80%, rgba(63, 20, 23, 0.9) 80%);
+
+    background-color: rgb(32, 33, 35);
+    background-size: 100% 100%;
+    min-height: 100%;
+    color: rgba(233, 233, 239);
+  }
+
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EB8A90;
+  }
+
+  
+  .loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+  }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: #FF3D00;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }

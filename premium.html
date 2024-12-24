@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>schdl premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <script type="module" src="premium.js"></script>
+  <style>
+    body {
+      background-image: url("https://pengwin.sirv.com/pngwn.png?blur=20");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-color: #b2b2ff;
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      opacity: 0;
+      animation: fadeIn 0.4s ease-in forwards;
+    }
+
+    h1 {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+    }
+
+    #message {
+      background: rgb(40, 40, 40);
+      max-width: 360px;
+      margin: 100px auto 16px;
+      padding: 32px 24px;
+      border-radius: 3px;
+    }
+
+    #message h2 {
+      color: #83b7f3;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+
+    #message h1 {
+      font-size: 22px;
+      font-weight: 300;
+      color: rgb(255, 255, 255);
+      margin: 0 0 16px;
+    }
+
+    #subscribe,
+    #unsubscribe {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 10px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #subscribe:hover,
+    #unsubscribe:hover {
+      background-color: #45a049;
+    }
+
+    #back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: #ffffff;
+      background-color: transparent;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 26px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="message">
+    <h2>schdl premium</h2>
+    <h3 id="status" style="color: #f3d583; font-size: 12px;">not subscribed</h3>
+    <h1>Subscribe to notifications</h1>
+    <button onclick="subscribeToNotifications" id="subscribe">Subscribe</button>
+    <button onclick="unsubscribeToNotifications" id="unsubscribe">Unsubscribe</button>
+  </div>
+  <button id="back-button">⬅️</button>
+  <script>
+    document.getElementById("back-button").addEventListener("click", function () {
+      window.history.back();
+    });
+  </script>
+</body>
+
+</html>

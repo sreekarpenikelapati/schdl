@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="module" src="index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/site.webmanifest">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-config" content="/icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <main>
+    <div class="fade-in-text">
+      <div class="outer">
+        <div class="middle">
+          <div class="inner">
+            <h1 id="text"></h1>
+            <p id="time"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <button onclick="toggleDarkMode()" id="dark-mode-toggle"
+    style="position: fixed; top: 0; right: 0; max-width: calc(100vw - 40px); width: auto; height: 40px; background-color: transparent; border: none; color: black; display: flex; align-items: center; justify-content: center; padding-left: 10px;">
+    <img id="DN" src="dn.svg" alt="Dark/Light mode toggle" style="width: 100%; height: 100%;">
+  </button>
+
+  <div onclick="window.location.href='/premium'"
+    style="position: fixed; bottom: 0; left: 0; width: 50px; height: 50px; cursor: pointer;"></div>
+
+  <div class="loader-wrapper">
+    <span class="loader"></span>
+  </div>
+
+  <script>
+    $(window).on("load", function () {
+      $(".loader-wrapper").fadeOut(1250);
+    });
+  </script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then(res => console.log("Service worker registered"))
+          .catch(err => console.log("Service worker not registered", err))
+      })
+    }
+
+  </script>
+
+  <script>
+    function toggleDarkMode() {
+      var htmlElement = document.documentElement;
+      htmlElement.classList.toggle("dark-mode");
+
+      var isDarkMode = htmlElement.classList.contains("dark-mode");
+      localStorage.setItem("isDarkMode", isDarkMode);
+
+      var icon = document.getElementById("DN");
+      if (isDarkMode) {
+        icon.style.filter = "invert(100%)";
+        document.getElementById("dark-mode-toggle").style.color = "white";
+      } else {
+        icon.style.filter = "none";
+        document.getElementById("dark-mode-toggle").style.color = "black";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var isDarkMode = localStorage.getItem("isDarkMode") === "true";
+
+      if (isDarkMode) {
+        document.documentElement.classList.add("dark-mode");
+        var icon = document.getElementById("DN");
+        icon.style.filter = "invert(100%)";
+        document.getElementById("dark-mode-toggle").style.color = "white";
+      }
+    });
+
+  </script>
+</body>
+
+</html>
